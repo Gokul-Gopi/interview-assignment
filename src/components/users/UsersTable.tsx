@@ -1,9 +1,7 @@
 import {
   ColumnDef,
-  ColumnFiltersState,
   flexRender,
   getCoreRowModel,
-  getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   SortingState,
@@ -34,13 +32,24 @@ import {
   PaginationPrevious,
 } from "@/components/ui/Pagination";
 import TableOptions from "./TableOptions";
+import { ChevronDown, ChevronsUpDown, ChevronUp } from "lucide-react";
 
 export const columns: ColumnDef<User>[] = [
   {
     accessorKey: "name",
-    header: "Name",
+    header: ({ column }) => (
+      <div className="pl-4">
+        <Button
+          variant="ghost"
+          className="px-0 hover:bg-transparent"
+          onClick={() => column.toggleSorting()}
+        >
+          Name
+        </Button>
+      </div>
+    ),
     cell: ({ row }) => (
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center pl-4">
         <Image
           src={row.original.avatar}
           alt={row.getValue("name")}
@@ -56,6 +65,7 @@ export const columns: ColumnDef<User>[] = [
     accessorKey: "email",
     header: "Email",
     cell: ({ row }) => row.getValue("email"),
+    enableSorting: false,
   },
   {
     accessorKey: "status",
@@ -74,33 +84,50 @@ export const columns: ColumnDef<User>[] = [
         </div>
       );
     },
+    enableSorting: false,
   },
   {
-    id: "actions",
+    accessorKey: "createdAt",
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        className="px-0 hover:bg-transparent"
+        onClick={() => column.toggleSorting()}
+      >
+        Created
+      </Button>
+    ),
+    cell: ({ row }) => {
+      const date: string = row.getValue("createdAt");
+      const formattedDate = new Date(date).toLocaleDateString();
+
+      return <span>{formattedDate}</span>;
+    },
+  },
+  {
+    accessorKey: "actions",
     header: "Actions",
     cell: () => <Button className="font-sans">View</Button>,
+    enableSorting: false,
   },
 ];
 
 const UsersTable = () => {
   const [sorting, setSorting] = useState<SortingState>([]);
-  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
 
-  const [data, setData] = useState<User[]>(usersMockData.slice(0, 10));
+  const [data] = useState<User[]>(usersMockData.slice(0, 10));
 
   const table = useReactTable({
     data,
     columns,
     onSortingChange: setSorting,
-    onColumnFiltersChange: setColumnFilters,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
-    getFilteredRowModel: getFilteredRowModel(),
-
+    enableSortingRemoval: true,
+    sortDescFirst: true,
     state: {
       sorting,
-      columnFilters,
     },
   });
 
@@ -128,12 +155,23 @@ const UsersTable = () => {
                 {headerGroup.headers.map((header) => {
                   return (
                     <TableHead key={header.id}>
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                      <div className="flex gap-2 items-center">
+                        {header.isPlaceholder
+                          ? null
+                          : flexRender(
+                              header.column.columnDef.header,
+                              header.getContext()
+                            )}
+
+                        {header.column.getCanSort() &&
+                          (header.column.getIsSorted() === "asc" ? (
+                            <ChevronUp size={14} />
+                          ) : header.column.getIsSorted() === "desc" ? (
+                            <ChevronDown size={14} />
+                          ) : (
+                            <ChevronsUpDown size={14} />
+                          ))}
+                      </div>
                     </TableHead>
                   );
                 })}
@@ -171,27 +209,6 @@ const UsersTable = () => {
           </TableBody>
         </Table>
       </div>
-
-      {/* <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="space-x-2">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.previousPage()}
-            disabled={!table.getCanPreviousPage()}
-          >
-            Previous
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
-          >
-            Next
-          </Button>
-        </div>
-      </div> */}
 
       <div className="mt-4">
         <Pagination>
