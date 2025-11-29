@@ -26,6 +26,7 @@ import StatusLabel from "./StatusLabel";
 import useUserStore from "@/store";
 import TablePagination from "./TablePagination";
 import { useDebouncedValue } from "@/hooks/useDebounceValue";
+import Link from "next/link";
 
 export const columns: ColumnDef<User>[] = [
   {
@@ -87,7 +88,11 @@ export const columns: ColumnDef<User>[] = [
   {
     accessorKey: "actions",
     header: "Actions",
-    cell: () => <Button className="font-sans">View</Button>,
+    cell: ({ row }) => (
+      <Link href={`/users/${row.original.id}`}>
+        <Button className="font-sans">View</Button>
+      </Link>
+    ),
     enableSorting: false,
   },
 ];

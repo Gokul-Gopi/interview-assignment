@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "avatar": "https://i.pravatar.cc/150?img=1",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user1",
     "name": "Liam Johnson",
     "email": "liam.johnson@example.com",
     "status": "active",
@@ -9,7 +9,7 @@
   },
   {
     "id": "2",
-    "avatar": "https://i.pravatar.cc/150?img=2",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user2",
     "name": "Olivia Smith",
     "email": "olivia.smith@example.com",
     "status": "inactive",
@@ -17,7 +17,7 @@
   },
   {
     "id": "3",
-    "avatar": "https://i.pravatar.cc/150?img=3",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user3",
     "name": "Noah Williams",
     "email": "noah.williams@example.com",
     "status": "active",
@@ -25,7 +25,7 @@
   },
   {
     "id": "4",
-    "avatar": "https://i.pravatar.cc/150?img=4",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user4",
     "name": "Emma Brown",
     "email": "emma.brown@example.com",
     "status": "inactive",
@@ -33,7 +33,7 @@
   },
   {
     "id": "5",
-    "avatar": "https://i.pravatar.cc/150?img=5",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user5",
     "name": "James Miller",
     "email": "james.miller@example.com",
     "status": "active",
@@ -41,7 +41,7 @@
   },
   {
     "id": "6",
-    "avatar": "https://i.pravatar.cc/150?img=6",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user6",
     "name": "Ava Davis",
     "email": "ava.davis@example.com",
     "status": "inactive",
@@ -49,7 +49,7 @@
   },
   {
     "id": "7",
-    "avatar": "https://i.pravatar.cc/150?img=7",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user7",
     "name": "Ethan Garcia",
     "email": "ethan.garcia@example.com",
     "status": "active",
@@ -57,7 +57,7 @@
   },
   {
     "id": "8",
-    "avatar": "https://i.pravatar.cc/150?img=8",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user8",
     "name": "Sophia Martinez",
     "email": "sophia.martinez@example.com",
     "status": "inactive",
@@ -65,7 +65,7 @@
   },
   {
     "id": "9",
-    "avatar": "https://i.pravatar.cc/150?img=9",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user9",
     "name": "Benjamin Rodriguez",
     "email": "benjamin.rodriguez@example.com",
     "status": "active",
@@ -73,7 +73,7 @@
   },
   {
     "id": "10",
-    "avatar": "https://i.pravatar.cc/150?img=10",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user10",
     "name": "Isabella Hernandez",
     "email": "isabella.hernandez@example.com",
     "status": "inactive",
@@ -82,7 +82,7 @@
 
   {
     "id": "11",
-    "avatar": "https://i.pravatar.cc/150?img=11",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user11",
     "name": "Lucas Moore",
     "email": "lucas.moore@example.com",
     "status": "active",
@@ -90,7 +90,7 @@
   },
   {
     "id": "12",
-    "avatar": "https://i.pravatar.cc/150?img=12",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user12",
     "name": "Mia Taylor",
     "email": "mia.taylor@example.com",
     "status": "inactive",
@@ -98,7 +98,7 @@
   },
   {
     "id": "13",
-    "avatar": "https://i.pravatar.cc/150?img=13",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user13",
     "name": "Henry Anderson",
     "email": "henry.anderson@example.com",
     "status": "active",
@@ -106,7 +106,7 @@
   },
   {
     "id": "14",
-    "avatar": "https://i.pravatar.cc/150?img=14",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user14",
     "name": "Charlotte Thomas",
     "email": "charlotte.thomas@example.com",
     "status": "inactive",
@@ -114,7 +114,7 @@
   },
   {
     "id": "15",
-    "avatar": "https://i.pravatar.cc/150?img=15",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user15",
     "name": "Alexander Lee",
     "email": "alexander.lee@example.com",
     "status": "active",
@@ -122,7 +122,7 @@
   },
   {
     "id": "16",
-    "avatar": "https://i.pravatar.cc/150?img=16",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user16",
     "name": "Amelia Perez",
     "email": "amelia.perez@example.com",
     "status": "inactive",
@@ -130,7 +130,7 @@
   },
   {
     "id": "17",
-    "avatar": "https://i.pravatar.cc/150?img=17",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user17",
     "name": "Logan White",
     "email": "logan.white@example.com",
     "status": "active",
@@ -138,7 +138,7 @@
   },
   {
     "id": "18",
-    "avatar": "https://i.pravatar.cc/150?img=18",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user18",
     "name": "Harper Harris",
     "email": "harper.harris@example.com",
     "status": "inactive",
@@ -146,7 +146,7 @@
   },
   {
     "id": "19",
-    "avatar": "https://i.pravatar.cc/150?img=19",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user19",
     "name": "Sebastian Clark",
     "email": "sebastian.clark@example.com",
     "status": "active",
@@ -154,7 +154,7 @@
   },
   {
     "id": "20",
-    "avatar": "https://i.pravatar.cc/150?img=20",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user20",
     "name": "Evelyn Lewis",
     "email": "evelyn.lewis@example.com",
     "status": "inactive",
@@ -163,7 +163,7 @@
 
   {
     "id": "21",
-    "avatar": "https://i.pravatar.cc/150?img=21",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user21",
     "name": "Jack Walker",
     "email": "jack.walker@example.com",
     "status": "active",
@@ -171,7 +171,7 @@
   },
   {
     "id": "22",
-    "avatar": "https://i.pravatar.cc/150?img=22",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user22",
     "name": "Ella Hall",
     "email": "ella.hall@example.com",
     "status": "inactive",
@@ -179,7 +179,7 @@
   },
   {
     "id": "23",
-    "avatar": "https://i.pravatar.cc/150?img=23",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user23",
     "name": "Matthew Allen",
     "email": "matthew.allen@example.com",
     "status": "active",
@@ -187,7 +187,7 @@
   },
   {
     "id": "24",
-    "avatar": "https://i.pravatar.cc/150?img=24",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user24",
     "name": "Scarlett Young",
     "email": "scarlett.young@example.com",
     "status": "inactive",
@@ -195,7 +195,7 @@
   },
   {
     "id": "25",
-    "avatar": "https://i.pravatar.cc/150?img=25",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user25",
     "name": "Wyatt King",
     "email": "wyatt.king@example.com",
     "status": "active",
@@ -203,7 +203,7 @@
   },
   {
     "id": "26",
-    "avatar": "https://i.pravatar.cc/150?img=26",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user26",
     "name": "Aria Wright",
     "email": "aria.wright@example.com",
     "status": "inactive",
@@ -211,7 +211,7 @@
   },
   {
     "id": "27",
-    "avatar": "https://i.pravatar.cc/150?img=27",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user27",
     "name": "Daniel Lopez",
     "email": "daniel.lopez@example.com",
     "status": "active",
@@ -219,7 +219,7 @@
   },
   {
     "id": "28",
-    "avatar": "https://i.pravatar.cc/150?img=28",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user28",
     "name": "Penelope Hill",
     "email": "penelope.hill@example.com",
     "status": "inactive",
@@ -227,7 +227,7 @@
   },
   {
     "id": "29",
-    "avatar": "https://i.pravatar.cc/150?img=29",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user29",
     "name": "Joseph Scott",
     "email": "joseph.scott@example.com",
     "status": "active",
@@ -235,7 +235,7 @@
   },
   {
     "id": "30",
-    "avatar": "https://i.pravatar.cc/150?img=30",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user30",
     "name": "Layla Green",
     "email": "layla.green@example.com",
     "status": "inactive",
@@ -244,7 +244,7 @@
 
   {
     "id": "31",
-    "avatar": "https://i.pravatar.cc/150?img=31",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user31",
     "name": "David Adams",
     "email": "david.adams@example.com",
     "status": "active",
@@ -252,7 +252,7 @@
   },
   {
     "id": "32",
-    "avatar": "https://i.pravatar.cc/150?img=32",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user32",
     "name": "Chloe Baker",
     "email": "chloe.baker@example.com",
     "status": "inactive",
@@ -260,7 +260,7 @@
   },
   {
     "id": "33",
-    "avatar": "https://i.pravatar.cc/150?img=33",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user33",
     "name": "Samuel Nelson",
     "email": "samuel.nelson@example.com",
     "status": "active",
@@ -268,7 +268,7 @@
   },
   {
     "id": "34",
-    "avatar": "https://i.pravatar.cc/150?img=34",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user34",
     "name": "Grace Carter",
     "email": "grace.carter@example.com",
     "status": "inactive",
@@ -276,7 +276,7 @@
   },
   {
     "id": "35",
-    "avatar": "https://i.pravatar.cc/150?img=35",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user35",
     "name": "Andrew Mitchell",
     "email": "andrew.mitchell@example.com",
     "status": "active",
@@ -284,7 +284,7 @@
   },
   {
     "id": "36",
-    "avatar": "https://i.pravatar.cc/150?img=36",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user36",
     "name": "Nora Perez",
     "email": "nora.perez@example.com",
     "status": "inactive",
@@ -292,7 +292,7 @@
   },
   {
     "id": "37",
-    "avatar": "https://i.pravatar.cc/150?img=37",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user37",
     "name": "Christopher Roberts",
     "email": "christopher.roberts@example.com",
     "status": "active",
@@ -300,7 +300,7 @@
   },
   {
     "id": "38",
-    "avatar": "https://i.pravatar.cc/150?img=38",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user38",
     "name": "Victoria Turner",
     "email": "victoria.turner@example.com",
     "status": "inactive",
@@ -308,7 +308,7 @@
   },
   {
     "id": "39",
-    "avatar": "https://i.pravatar.cc/150?img=39",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user39",
     "name": "Elijah Phillips",
     "email": "elijah.phillips@example.com",
     "status": "active",
@@ -316,7 +316,7 @@
   },
   {
     "id": "40",
-    "avatar": "https://i.pravatar.cc/150?img=40",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user40",
     "name": "Zoey Campbell",
     "email": "zoey.campbell@example.com",
     "status": "inactive",
@@ -325,7 +325,7 @@
 
   {
     "id": "41",
-    "avatar": "https://i.pravatar.cc/150?img=41",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user41",
     "name": "Ryan Parker",
     "email": "ryan.parker@example.com",
     "status": "active",
@@ -333,7 +333,7 @@
   },
   {
     "id": "42",
-    "avatar": "https://i.pravatar.cc/150?img=42",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user42",
     "name": "Hannah Evans",
     "email": "hannah.evans@example.com",
     "status": "inactive",
@@ -341,7 +341,7 @@
   },
   {
     "id": "43",
-    "avatar": "https://i.pravatar.cc/150?img=43",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user43",
     "name": "Gabriel Edwards",
     "email": "gabriel.edwards@example.com",
     "status": "active",
@@ -349,7 +349,7 @@
   },
   {
     "id": "44",
-    "avatar": "https://i.pravatar.cc/150?img=44",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user44",
     "name": "Lily Collins",
     "email": "lily.collins@example.com",
     "status": "inactive",
@@ -357,7 +357,7 @@
   },
   {
     "id": "45",
-    "avatar": "https://i.pravatar.cc/150?img=45",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user45",
     "name": "Thomas Stewart",
     "email": "thomas.stewart@example.com",
     "status": "active",
@@ -365,7 +365,7 @@
   },
   {
     "id": "46",
-    "avatar": "https://i.pravatar.cc/150?img=46",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user46",
     "name": "Avery Morris",
     "email": "avery.morris@example.com",
     "status": "inactive",
@@ -373,7 +373,7 @@
   },
   {
     "id": "47",
-    "avatar": "https://i.pravatar.cc/150?img=47",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user47",
     "name": "Dylan Rogers",
     "email": "dylan.rogers@example.com",
     "status": "active",
@@ -381,7 +381,7 @@
   },
   {
     "id": "48",
-    "avatar": "https://i.pravatar.cc/150?img=48",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user48",
     "name": "Sofia Reed",
     "email": "sofia.reed@example.com",
     "status": "inactive",
@@ -389,7 +389,7 @@
   },
   {
     "id": "49",
-    "avatar": "https://i.pravatar.cc/150?img=49",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user49",
     "name": "Jonathan Cook",
     "email": "jonathan.cook@example.com",
     "status": "active",
@@ -397,7 +397,7 @@
   },
   {
     "id": "50",
-    "avatar": "https://i.pravatar.cc/150?img=50",
+    "avatar": "https://api.dicebear.com/7.x/bottts/png?seed=user50",
     "name": "Aubrey Morgan",
     "email": "aubrey.morgan@example.com",
     "status": "inactive",
