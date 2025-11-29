@@ -1,6 +1,15 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 
+export const getServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: "/users",
+      permanent: false,
+    },
+  };
+};
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
