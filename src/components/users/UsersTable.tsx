@@ -20,7 +20,6 @@ import {
 import { useState } from "react";
 import Image from "next/image";
 import { User } from "@/types";
-import usersMockData from "../../../public/users.json";
 import {
   Pagination,
   PaginationContent,
@@ -33,7 +32,6 @@ import {
 import TableOptions from "./TableOptions";
 import { ChevronDown, ChevronsUpDown, ChevronUp } from "lucide-react";
 import StatusLabel from "./StatusLabel";
-import { useStore } from "zustand";
 import useUserStore from "@/store";
 
 export const columns: ColumnDef<User>[] = [
@@ -105,7 +103,6 @@ const UsersTable = () => {
   const [sorting, setSorting] = useState<SortingState>([]);
 
   const users = useUserStore((state) => state.users);
-  console.log({ users });
 
   const table = useReactTable({
     data: users,
@@ -121,21 +118,11 @@ const UsersTable = () => {
     },
   });
 
-  const onSearch = (value: string) => {
-    table.getColumn("name")?.setFilterValue(value);
-  };
-
-  const onStatusChange = (value: string) => {
-    table.getColumn("status")?.setFilterValue(value);
-  };
+  console.log({ users });
 
   return (
     <div className="w-full max-w-240 mx-auto">
-      <TableOptions
-        search={table.getColumn("name")?.getFilterValue() as string}
-        onSearch={onSearch}
-        onStatusChange={onStatusChange}
-      />
+      <TableOptions />
 
       <div className="overflow-hidden min-h-142 rounded-md border">
         <Table>
