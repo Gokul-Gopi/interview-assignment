@@ -10,6 +10,7 @@ import {
 import { X } from "lucide-react";
 import useUserStore from "@/store";
 import usersData from "../../../public/users.json";
+import { useDebouncedValue } from "@/hooks/useDebounceValue";
 
 const statusOptions = [
   { value: "active", label: "Active" },
@@ -19,6 +20,8 @@ const statusOptions = [
 const UserTableOptions = () => {
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("");
+
+  const debouncedSearch = useDebouncedValue(search, 500);
 
   const setUsers = useUserStore((state) => state.setUsers);
 
@@ -32,11 +35,11 @@ const UserTableOptions = () => {
 
     const filteredUsers = usersData.filter(
       (user) =>
-        user.name.toLowerCase().includes(search.toLowerCase()) &&
+        user.name.toLowerCase().includes(debouncedSearch.toLowerCase()) &&
         (status ? user.status === status : true)
     );
     setUsers(filteredUsers);
-  }, [search, status]);
+  }, [debouncedSearch, status]);
 
   return (
     <div className="flex gap-2 mb-4">
