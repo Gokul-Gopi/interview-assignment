@@ -1,10 +1,11 @@
+import AppLayout from "@/components/layout/AppLayout";
 import UsersTable from "@/components/users/UsersTable";
 
 const Page = () => {
   return (
-    <main className="flex items-center justify-center min-h-dvh px-4">
+    <AppLayout header="Users">
       <UsersTable />
-    </main>
+    </AppLayout>
   );
 };
 

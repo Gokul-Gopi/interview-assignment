@@ -21,7 +21,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { User } from "@/types";
 import usersMockData from "../../../public/users.json";
-import { cn } from "@/utils/helpers";
 import {
   Pagination,
   PaginationContent,
@@ -33,6 +32,7 @@ import {
 } from "@/components/ui/Pagination";
 import TableOptions from "./TableOptions";
 import { ChevronDown, ChevronsUpDown, ChevronUp } from "lucide-react";
+import StatusLabel from "./StatusLabel";
 
 export const columns: ColumnDef<User>[] = [
   {
@@ -70,20 +70,7 @@ export const columns: ColumnDef<User>[] = [
   {
     accessorKey: "status",
     header: () => "Status",
-    cell: ({ row }) => {
-      const status: string = row.getValue("status");
-
-      return (
-        <div
-          className={cn("capitalize px-3 font-medium py-1 rounded-md w-fit", {
-            "bg-green-300": status === "active",
-            "bg-red-300": status === "inactive",
-          })}
-        >
-          {status}
-        </div>
-      );
-    },
+    cell: ({ row }) => <StatusLabel status={row.getValue("status")} />,
     enableSorting: false,
   },
   {
@@ -140,7 +127,7 @@ const UsersTable = () => {
   };
 
   return (
-    <div className="w-full max-w-240">
+    <div className="w-full max-w-240 mx-auto">
       <TableOptions
         search={table.getColumn("name")?.getFilterValue() as string}
         onSearch={onSearch}
