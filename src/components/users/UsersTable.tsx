@@ -33,6 +33,8 @@ import {
 import TableOptions from "./TableOptions";
 import { ChevronDown, ChevronsUpDown, ChevronUp } from "lucide-react";
 import StatusLabel from "./StatusLabel";
+import { useStore } from "zustand";
+import useUserStore from "@/store";
 
 export const columns: ColumnDef<User>[] = [
   {
@@ -102,10 +104,11 @@ export const columns: ColumnDef<User>[] = [
 const UsersTable = () => {
   const [sorting, setSorting] = useState<SortingState>([]);
 
-  const [data] = useState<User[]>(usersMockData.slice(0, 10));
+  const users = useUserStore((state) => state.users);
+  console.log({ users });
 
   const table = useReactTable({
-    data,
+    data: users,
     columns,
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
