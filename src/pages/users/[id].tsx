@@ -7,6 +7,8 @@ import Image from "next/image";
 import StatusLabel from "@/components/users/StatusLabel";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import UserCard from "@/components/userDetails/UserCard";
+import LastActivity from "@/components/userDetails/LastActivity";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   //fetching the user server-side
@@ -43,40 +45,10 @@ const Page = ({ user }: { user: User }) => {
   const [userDetails, setUserDetails] = useState<User>(user);
 
   return (
-    <AppLayout header="User details" className="flex  justify-center">
-      <div className="flex items-center gap-3 p-5 shadow border rounded-lg h-fit">
-        <Image
-          src={userDetails.avatar}
-          alt={userDetails.name}
-          width={200}
-          height={200}
-          className="rounded-full mx-auto"
-        />
-
-        <div className="flex flex-col gap-1">
-          <div className="flex items-center text-lg">
-            <p className="font-semibold w-18">Name: </p>
-            <p className="text-primary font-medium">{userDetails.name}</p>
-          </div>
-
-          <div className="flex items-center text-lg">
-            <p className="font-semibold w-18">Email: </p>
-            <Link
-              target="_blank"
-              href={`mailto:${userDetails.email}`}
-              className="text-primary font-medium hover:underline hover:underline-offset-4"
-            >
-              {userDetails.email}
-            </Link>
-          </div>
-
-          <div className="flex items-center text-lg">
-            <p className="font-semibold w-18">Status: </p>
-            <StatusLabel status={userDetails.status} />
-          </div>
-
-          <Button className="mt-4">Edit</Button>
-        </div>
+    <AppLayout header="User details" className="flex gap-4 justify-center">
+      <div className="flex flex-col gap-6">
+        <UserCard user={userDetails} />
+        <LastActivity />
       </div>
     </AppLayout>
   );

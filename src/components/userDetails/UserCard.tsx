@@ -10,7 +10,7 @@ interface UserCardProps {
 
 const UserCard = ({ user }: UserCardProps) => {
   return (
-    <div className="flex items-center gap-3 p-5 shadow border rounded-lg h-fit">
+    <div className="flex items-center gap-3 p-5 shadow border rounded-lg h-fit w-full">
       <Image
         src={user.avatar}
         alt={user.name}
