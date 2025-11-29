@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Input } from "@/components/ui/Input";
 import {
   Select,
@@ -10,19 +10,27 @@ import {
 import { X } from "lucide-react";
 import useUserStore from "@/store";
 import usersData from "../../../public/users.json";
-import { useDebouncedValue } from "@/hooks/useDebounceValue";
 
 const statusOptions = [
   { value: "active", label: "Active" },
   { value: "inactive", label: "Inactive" },
 ];
 
-const UserTableOptions = () => {
-  const [search, setSearch] = useState("");
-  const [status, setStatus] = useState("");
+interface ITableOptionsProps {
+  search: string;
+  debouncedSearch: string;
+  setSearch: (value: string) => void;
+  status: string;
+  setStatus: (value: string) => void;
+}
 
-  const debouncedSearch = useDebouncedValue(search, 500);
-
+const UserTableOptions = ({
+  search,
+  debouncedSearch,
+  setSearch,
+  status,
+  setStatus,
+}: ITableOptionsProps) => {
   const setUsers = useUserStore((state) => state.setUsers);
 
   const isMounted = useRef(false);
@@ -42,17 +50,17 @@ const UserTableOptions = () => {
   }, [debouncedSearch, status]);
 
   return (
-    <div className="flex gap-2 mb-4">
+    <div className="flex max-md:flex-col gap-2 mb-4">
       <Input
         placeholder="Search by name.."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="w-full max-w-xs"
+        className="w-full max-md:text-sm md:max-w-xs"
       />
 
       <div className="relative">
         <Select value={status} onValueChange={(value) => setStatus(value)}>
-          <SelectTrigger className="w-40 relative">
+          <SelectTrigger className="w-full md:w-40 relative">
             <SelectValue placeholder="Status" />
           </SelectTrigger>
 

@@ -20,19 +20,12 @@ import {
 import { useState } from "react";
 import Image from "next/image";
 import { User } from "@/types";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/Pagination";
 import TableOptions from "./TableOptions";
 import { ChevronDown, ChevronsUpDown, ChevronUp } from "lucide-react";
 import StatusLabel from "./StatusLabel";
 import useUserStore from "@/store";
+import TablePagination from "./TablePagination";
+import { useDebouncedValue } from "@/hooks/useDebounceValue";
 
 export const columns: ColumnDef<User>[] = [
   {
@@ -100,6 +93,10 @@ export const columns: ColumnDef<User>[] = [
 ];
 
 const UsersTable = () => {
+  const [search, setSearch] = useState("");
+  const [status, setStatus] = useState("");
+  const debouncedSearch = useDebouncedValue(search, 500);
+
   const [sorting, setSorting] = useState<SortingState>([]);
 
   const users = useUserStore((state) => state.users);
@@ -118,11 +115,15 @@ const UsersTable = () => {
     },
   });
 
-  console.log({ users });
-
   return (
     <div className="w-full max-w-240 mx-auto">
-      <TableOptions />
+      <TableOptions
+        search={search}
+        debouncedSearch={debouncedSearch}
+        setSearch={setSearch}
+        status={status}
+        setStatus={setStatus}
+      />
 
       <div className="overflow-hidden min-h-142 rounded-md border">
         <Table>
@@ -187,24 +188,7 @@ const UsersTable = () => {
         </Table>
       </div>
 
-      <div className="mt-4">
-        <Pagination>
-          <PaginationContent>
-            <PaginationItem>
-              <PaginationPrevious href="#" />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href="#">1</PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationEllipsis />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationNext href="#" />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
-      </div>
+      <TablePagination search={debouncedSearch} status={status} />
     </div>
   );
 };
